@@ -1,17 +1,18 @@
-import Todo from "./Todo";
-
-
+import React from 'react';
+import Todo from './Todo';
+ import style from './todos.module.css';
 const Todos = ({todos}) => {
     console.log(todos)
-  
     return (
-        <div>
-           {
+        <>
+         <section className={style.todos}>
+         {
             todos.map((todo)=>(
-                <Todo key={id} todo={todo}/>
+              <Todo key={todo.id} todo={todo}/>
             ))
-           }
-        </div>
+           } 
+         </section>
+        </>
     );
 };
 

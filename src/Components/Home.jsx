@@ -1,5 +1,5 @@
 import Todos from "./Todos";
-
+import style from "./home.module.css";
 
 const Home = () => {
     const dummyTodo=[
@@ -22,7 +22,8 @@ const Home = () => {
       
       ]
     return (
-        <div>
+        <div className={style.container}>
+          <h1 style={{color:"white"}}>Todo App</h1>
         <Todos todos={dummyTodo}/>
         </div>
     );
